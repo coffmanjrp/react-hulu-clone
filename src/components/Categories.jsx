@@ -1,3 +1,6 @@
+import categoryData from '../utils/categoryData';
+import unescapeHTML from '../lib/unescapeHTML';
+
 const Categories = () => {
   return (
     <section className="categories">
@@ -8,34 +11,20 @@ const Categories = () => {
         movies, Hulu Originals, kids shows, and more.
       </p>
       <div className="covers">
-        <div className="cover-1">
-          <div className="cover-grad"></div>
-          <div className="cover-text">
-            <p className="sub-title">Past &amp; Current Seasons</p>
-            <h3>TV Shows</h3>
-          </div>
-        </div>
-        <div className="cover-2">
-          <div className="cover-grad"></div>
-          <div className="cover-text">
-            <p className="sub-title">New &amp; Classics</p>
-            <h3>Movies</h3>
-          </div>
-        </div>
-        <div className="cover-3">
-          <div className="cover-grad"></div>
-          <div className="cover-text">
-            <p className="sub-title">Groundbreaking</p>
-            <h3>Hulu Originals</h3>
-          </div>
-        </div>
-        <div className="cover-4">
-          <div className="cover-grad"></div>
-          <div className="cover-text">
-            <p className="sub-title">Add-On</p>
-            <h3>Premiums</h3>
-          </div>
-        </div>
+        {categoryData.length > 0 &&
+          categoryData.map((data) => (
+            <div
+              className="cover"
+              key={data.id}
+              style={{ backgroundImage: `url(${data.cover})` }}
+            >
+              <div className="cover-grad" />
+              <div className="cover-text">
+                <p className="sub-title">{unescapeHTML(data.subTitle)}</p>
+                <h3>{unescapeHTML(data.title)}</h3>
+              </div>
+            </div>
+          ))}
       </div>
     </section>
   );

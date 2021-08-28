@@ -18,6 +18,10 @@ import welcomeTabBg3 from './welcome-tab-3.jpg';
 import welcomeTabBg1Small from './welcome-tab-1-small.jpg';
 import welcomeTabBg2Small from './welcome-tab-2-small.jpg';
 import welcomeTabBg3Small from './welcome-tab-3-small.jpg';
+import cover1 from './cover-1.jpg';
+import cover2 from './cover-2.jpg';
+import cover3 from './cover-3.jpg';
+import cover4 from './cover-4.jpg';
 import facebook from './facebook.svg';
 import twitter from './twitter.svg';
 import youtube from './youtube.svg';
@@ -45,6 +49,10 @@ export {
   welcomeTabBg1Small,
   welcomeTabBg2Small,
   welcomeTabBg3Small,
+  cover1,
+  cover2,
+  cover3,
+  cover4,
   facebook,
   twitter,
   youtube,
