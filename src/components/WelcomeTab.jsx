@@ -3,7 +3,6 @@ import tabData from '../utils/tabData';
 import unescapeHTML from '../lib/unescapeHTML';
 
 const WelcomeTab = () => {
-  const [data] = useState(tabData);
   const [activeTab, setActiveTab] = useState(1);
   const [barWidth, setBarWidth] = useState(78);
   const [barOffset, setBarOffset] = useState(0);
@@ -25,18 +24,18 @@ const WelcomeTab = () => {
               ? `linear-gradient(
                 rgba(0, 0, 0, 0.8) -39.59%,
                 rgba(0, 0, 0, 0) 117.14%
-              ), url(${data[activeTab - 1].backgroundSmall})`
+              ), url(${tabData[activeTab - 1].backgroundSmall})`
               : `linear-gradient(
                 90deg,
                 rgba(0, 0, 0, 0.8) -57.5%,
                 rgba(0, 0, 0, 0) 98.72%
-              ), url(${data[activeTab - 1].background})`,
+              ), url(${tabData[activeTab - 1].background})`,
         }}
       >
         <div className="welcome-tab-container">
           <div className="welcome-tab-controllers">
-            {data.length > 0 &&
-              data.map((tab) => (
+            {tabData.length > 0 &&
+              tabData.map((tab) => (
                 <a
                   key={tab.id}
                   href="#!"
@@ -57,8 +56,8 @@ const WelcomeTab = () => {
             }}
           />
 
-          {data.length > 0 &&
-            data.map((tab) => (
+          {tabData.length > 0 &&
+            tabData.map((tab) => (
               <div
                 key={tab.id}
                 id={`tab-${tab.id}-content`}
