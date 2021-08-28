@@ -12,6 +12,12 @@ import biggestEventsLogo1 from './biggest-events-logo-1.png';
 import biggestEventsLogo2 from './biggest-events-logo-2.png';
 import biggestEventsLogo3 from './biggest-events-logo-3.png';
 import biggestEventsLogo4 from './biggest-events-logo-4.png';
+import welcomeTabBg1 from './welcome-tab-1.jpg';
+import welcomeTabBg2 from './welcome-tab-2.jpg';
+import welcomeTabBg3 from './welcome-tab-3.jpg';
+import welcomeTabBg1Small from './welcome-tab-1-small.jpg';
+import welcomeTabBg2Small from './welcome-tab-2-small.jpg';
+import welcomeTabBg3Small from './welcome-tab-3-small.jpg';
 import facebook from './facebook.svg';
 import twitter from './twitter.svg';
 import youtube from './youtube.svg';
@@ -33,6 +39,12 @@ export {
   biggestEventsLogo2,
   biggestEventsLogo3,
   biggestEventsLogo4,
+  welcomeTabBg1,
+  welcomeTabBg2,
+  welcomeTabBg3,
+  welcomeTabBg1Small,
+  welcomeTabBg2Small,
+  welcomeTabBg3Small,
   facebook,
   twitter,
   youtube,
