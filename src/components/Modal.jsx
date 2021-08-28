@@ -1,8 +1,29 @@
+import { useEffect, useRef } from 'react';
 import { close } from '../img';
 
-const Modal = () => {
+const Modal = ({ openModal, setOpenModal }) => {
+  const modalRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener('click', outsideClick);
+
+    return () => window.removeEventListener('click', outsideClick);
+
+    // eslint-disable-next-line
+  }, []);
+
+  const outsideClick = (e) => {
+    if (e.target === modalRef.current) {
+      setOpenModal(false);
+    }
+  };
+
   return (
-    <div className="modal">
+    <div
+      ref={modalRef}
+      className="modal "
+      style={{ display: openModal ? 'block' : 'none' }}
+    >
       <div className="modal-box">
         <div className="modal-body">
           <h3>Log In</h3>
@@ -26,7 +47,12 @@ const Modal = () => {
             Don't have an account? <a href="#!">Start your free trial</a>
           </p>
         </div>
-        <img src={close} alt="Close" className="close" />
+        <img
+          src={close}
+          alt="Close"
+          className="close"
+          onClick={() => setOpenModal(false)}
+        />
       </div>
     </div>
   );

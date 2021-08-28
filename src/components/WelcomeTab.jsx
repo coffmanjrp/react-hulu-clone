@@ -29,7 +29,7 @@ const WelcomeTab = () => {
               Biggest Events
             </a>
           </div>
-          <div className="active-bar"></div>
+          <div className="active-bar" />
 
           <div id="tab-1-content" className="welcome-tab-content active">
             <p className="text-xl">Live Sports</p>

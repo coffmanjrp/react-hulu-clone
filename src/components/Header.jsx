@@ -1,12 +1,17 @@
 import { logo } from '../img';
 
-const Header = () => {
+const Header = ({ setOpenModal }) => {
   return (
     <header className="header">
       <nav>
         <ul>
           <li>
-            <button className="login-btn">Login</button>
+            <button
+              className="login-btn"
+              onClick={() => setOpenModal((prev) => !prev)}
+            >
+              Login
+            </button>
           </li>
         </ul>
       </nav>
