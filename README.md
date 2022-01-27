@@ -2,6 +2,8 @@
 
 A Hulu clone site.
 
+[DEMO](https://react-hulu-clone-nu.vercel.app/)
+
 ![Hulu Clone](https://res.cloudinary.com/coffmanjrp-dev/image/upload/v1643306197/coffmanjrp.io/hulu_clone_0902088058.png)
 
 ## How to start
